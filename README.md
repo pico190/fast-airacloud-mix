@@ -1,3 +1,11 @@
+# Que es esto?
+
+Esto es un editor de código basado en codemirror que hize hace un tiempo junto a Optix, que ahora se fue o algo asi no se
+
+Un saludo y viva el kebab y jetbrains
+
+---
+
 # <img src="https://swiftlystatic.vercel.app/airacloud/favicon.svg" height="30px" width="30px"> AiraCloud
 
 AiraCloud v6 [Latest]
