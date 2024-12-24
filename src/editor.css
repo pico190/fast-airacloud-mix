@@ -1,0 +1,992 @@
+.cm-editor {
+  overflow: hidden !important;
+  width: 100%;
+  height: calc(calc(100% - var(--nav-height)) - var(--cm-info-height));
+}
+
+.cm-info-element img {
+  height: 70%
+}
+
+.cm-cursor {
+  border-left-color: var(--cm-cursor) !important;
+}
+
+span[title="Fold line"],
+span[title="Unfold line"] {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  height: 85%
+}
+
+.cm-gutters.cm-minimap-gutter {
+  background-color: var(--cm-bg) !important;
+  filter: contrast(1.03);
+}
+
+.foldicon {
+  --size: 25px;
+  width: var(--size);
+  height: var(--size);
+  margin-top: auto;
+  margin-bottom: auto
+}
+
+.sb-files-title button {
+  border: none;
+  border-radius: none;
+  background-color: unset;
+  display: flex;
+  background: transparent;
+  height: var(--size);
+  width: var(--size);
+  --size: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 8px
+}
+
+.sb-files-title b {
+  margin-right: auto;
+  gap: 8px
+}
+
+.sb-files-title button img {
+  width: 100%;
+  height: 100%
+}
+
+.sb-files-title button:hover {
+  background-color: #ffffff17
+}
+
+
+.nav-button {
+  word-break: keep-all;
+  color: var(--text);
+  background-color: transparent;
+  border: 1px solid var(--border);
+  padding: 12px 16px;
+  border-radius: calc(var(--component-radius) / 2);
+  font-size: 16px;
+}
+
+.primary {
+  background: var(--primary-blue);
+}
+
+.sb-files {
+  background-color: var(--default-button);
+  border-radius: var(--component-radius);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.sb-file {
+  padding: var(--padding);
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  gap: 9px
+}
+
+.sbfile-open input {
+  background-color: var(--file-open-bg);
+}
+
+input {
+  width: 100%;
+  box-shadow: none !important;
+  outline: 0px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  border-bottom: 1px solid rgba(var(--textrgba), .6);
+  padding: 0px 8px;
+  background-color: var(--default-button);
+}
+
+input:focus {
+  width: 100%;
+  box-shadow: none !important;
+  outline: 0px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  border-bottom: 1px solid var(--primary-blue);
+  padding: 0px 8px;
+  background-color: var(--default-button);
+}
+
+.sb-file * {
+  line-height: 40px;
+}
+
+.sbfile-open {
+  background-color: var(--file-open-bg)
+}
+
+.sb-files *,
+.sb-files {
+  --padding: 19px
+}
+
+.editorcontainer {
+  border-radius: 0px !important;
+  border: none;
+}
+
+.view {
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--component-radius);
+  border: 1px solid var(--border);
+  background-color: var(--cm-bg);
+}
+
+.sb-files,
+.sb-editor-content {
+  max-height: 100% !important;
+  overflow-y: scroll;
+}
+
+.sb-file:not(.sbfile-open):hover {
+  background-color: var(--default-button-hover)
+}
+
+.sb-files-title {
+  padding: var(--padding);
+  padding-top: calc(var(--padding) / 2);
+  padding-bottom: calc(var(--padding) / 2);
+  background-color: #ffffff0d;
+  display: flex;
+  align-items: center;
+  font-size: 18px
+}
+
+.sb-files:hover {
+  scrollbar-width: unset !important
+}
+
+.nav {
+  width: 100vw;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  padding: 0px var(--sb-small-title-padding);
+}
+
+* {
+  --nav-height: 8vh;
+  --sb-small-title-padding: 15px;
+}
+
+.sidebar {
+  height: calc(100vh - var(--nav-height));
+}
+
+.SBContent {
+  padding: 0px;
+  gap: 12px;
+  padding-bottom: 12px;
+}
+
+.aira_sb_title {
+  padding: 0px var(--sb-small-title-padding);
+  padding-left: calc(var(--sb-small-title-padding) - var(--content-padding))
+}
+
+.cm-info-separator {
+  width: 100%;
+}
+
+.cm-info-element {
+  min-width: 55px;
+  max-width: 500px;
+  gap: 4px
+}
+
+.cm-info-left {
+  border-left: none !important;
+  border-right: 1px solid var(--border) !important;
+}
+
+.cm-info {
+  background-color: var(--cm-bg);
+  display: flex;
+  height: var(--cm-info-height);
+  border-top: 1px solid var(--border);
+  color: var(--text)
+}
+
+.cm-info *,
+.cm-info {
+  font-family: var(--principal-font-family) !important;
+  filter: contrast(1.08);
+}
+
+.ͼ2f.ͼ2l {
+  color: var(--cm-md-quote-meta) !important
+}
+
+.cm-gutter .deleted {
+  background-color: red
+}
+
+.cm-gutter .modified {
+  background-color: #ff0
+}
+
+.cm-gutter .created {
+  background-color: #0f0
+}
+
+.content {
+  padding: var(--content-padding);
+  padding-top: 0px;
+  transform: translate(30vw, -1px) !important;
+  height: calc(100vh - var(--nav-height))
+}
+
+.content-left {
+  display: flex;
+  gap: 15px;
+  height: calc(100% - calc(var(--cm-info-height) * 2))
+}
+
+.cm-cursor {
+  border-left: 2px solid var(--cm-cursor) !important
+}
+
+.cm-dropCursor {
+  border-left: 2px dotted var(--cm-cursor) !important;
+  transition-duration: .1s
+}
+
+.cm-layer.cm-layer-above.cm-cursorLayer {
+  animation-name: none !important
+}
+
+.cm-cursorLayer[style="z-index: 150; animation-duration: 1200ms; animation-name: cm-blink2;"]>.cm-cursor {
+  animation-name: var(--animation-name2) !important;
+  animation-iteration-count: infinite !important;
+  animation-duration: 1.2s !important
+}
+
+.cm-cursorLayer[style="z-index: 150; animation-duration: 1200ms; animation-name: cm-blink;"]>.cm-cursor {
+  animation-name: var(--animation-name) !important;
+  animation-iteration-count: infinite !important;
+  animation-duration: 1.2s !important
+}
+
+.cm-cursor-secondary {
+  opacity: .5
+}
+
+.cm-gutters {
+  background-color: var(--cm-bg) !important;
+  border-right: 0px solid transparent
+}
+
+.cm-completionDetail {
+  float: right;
+  width: 100%;
+  text-align: right
+}
+
+@keyframes aira-blink-smooth {
+  0% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes aira-blink-smooth2 {
+  0% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.cm-cursor {
+  animation-delay: .4s
+}
+
+@keyframes aira-blink-expand {
+  0% {
+    transform: translateY(0) scaleY(1);
+    -webkit-transform: translateY(0%) scaleY(1);
+    -moz-transform: translateY(0%) scaleY(1);
+    -ms-transform: translateY(0%) scaleY(1);
+    -o-transform: translateY(0%) scaleY(1)
+  }
+
+  25% {
+    transform: translateY(0) scaleY(0);
+    -webkit-transform: translateY(0%) scaleY(0);
+    -moz-transform: translateY(0%) scaleY(0);
+    -ms-transform: translateY(0%) scaleY(0);
+    -o-transform: translateY(0%) scaleY(0)
+  }
+
+  75% {
+    transform: translateY(0) scaleY(1);
+    -webkit-transform: translateY(0%) scaleY(1);
+    -moz-transform: translateY(0%) scaleY(1);
+    -ms-transform: translateY(0%) scaleY(1);
+    -o-transform: translateY(0%) scaleY(1)
+  }
+
+  to {
+    transform: translateY(0) scaleY(1);
+    -webkit-transform: translateY(0%) scaleY(1);
+    -moz-transform: translateY(0%) scaleY(1);
+    -ms-transform: translateY(0%) scaleY(1);
+    -o-transform: translateY(0%) scaleY(1)
+  }
+}
+
+@keyframes aira-blink-expand2 {
+  0% {
+    transform: translateY(0) scaleY(1);
+    -webkit-transform: translateY(0%) scaleY(1);
+    -moz-transform: translateY(0%) scaleY(1);
+    -ms-transform: translateY(0%) scaleY(1);
+    -o-transform: translateY(0%) scaleY(1)
+  }
+
+  25% {
+    transform: translateY(0) scaleY(0);
+    -webkit-transform: translateY(0%) scaleY(0);
+    -moz-transform: translateY(0%) scaleY(0);
+    -ms-transform: translateY(0%) scaleY(0);
+    -o-transform: translateY(0%) scaleY(0)
+  }
+
+  75% {
+    transform: translateY(0) scaleY(1);
+    -webkit-transform: translateY(0%) scaleY(1);
+    -moz-transform: translateY(0%) scaleY(1);
+    -ms-transform: translateY(0%) scaleY(1);
+    -o-transform: translateY(0%) scaleY(1)
+  }
+
+  to {
+    transform: translateY(0) scaleY(1);
+    -webkit-transform: translateY(0%) scaleY(1);
+    -moz-transform: translateY(0%) scaleY(1);
+    -ms-transform: translateY(0%) scaleY(1);
+    -o-transform: translateY(0%) scaleY(1)
+  }
+}
+
+.cm-info-first-right {
+  margin-left: auto;
+}
+
+.cm-info,
+.cm-info * {
+  font-size: 14px !important
+}
+
+.cm-principalpage {
+  background-color: var(--cm-bg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.cm-principalpage .loader {
+  display: block;
+  position: unset;
+  width: 200px;
+  height: 200px;
+  background: transparent
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.cm-principalpage .loader {
+  animation-name: loader;
+  animation-duration: .4s;
+  filter: blur(.2px);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite
+}
+
+.cm-principalpage h1 {
+  font-size: 100px
+}
+
+.cm-principalpage *,
+.cm-principalpage {
+  font-family: var(--principal-font-family) !important
+}
+
+.cm-principalpage img:not(.loader) {
+  width: 262px;
+  filter: grayscale(80%)
+}
+
+.cm-principalpage h2 {
+  font-size: 80px
+}
+
+.cm-principalpage p {
+  font-size: 30px
+}
+
+.sb-file span {
+  max-width: 90%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.cm-editor:not(.cm-focused) .cm-selectionLayer {
+  filter: url(#selection-goo) contrast(1.08);
+}
+
+.cm-selectionBackground {
+  background-color: var(--cm-selection) !important;
+}
+
+* {
+  --cm-info-height: 30px;
+  --cm-selection: rgb(var(--cm-selectionRgb));
+  --firefox-selection-border-radius: calc(var(--editor-font-size) / 4);
+  ;
+}
+
+.cm-completionIcon-classes {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Classes)
+}
+
+.cm-completionIcon-colors {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Colors)
+}
+
+.cm-completionIcon-constants {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Constants)
+}
+
+.cm-completionIcon-events {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Events)
+}
+
+.cm-completionIcon-fields {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Fields)
+}
+
+.cm-completionIcon-files {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Files)
+}
+
+.cm-completionIcon-folders {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Folders)
+}
+
+.cm-completionIcon-interfaces {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Interfaces)
+}
+
+.cm-completionIcon-keywords {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Keywords)
+}
+
+.cm-completionIcon-methods-and-functions {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Methods%20and%20Functions)
+}
+
+.cm-completionIcon-modules {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Modules)
+}
+
+.cm-completionIcon-operators {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Operators)
+}
+
+.cm-completionIcon-properties-and-attributes {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Properties%20and%20Attributes)
+}
+
+.cm-completionIcon-references {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=References)
+}
+
+.cm-completionIcon-snippet-prefixes {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Snippet%20prefixes)
+}
+
+.cm-completionIcon-structures {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Structures)
+}
+
+.cm-completionIcon-type-parameters {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Type%20parameters)
+}
+
+.cm-completionIcon-unit {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Unit)
+}
+
+.cm-completionIcon-values-and-enumerations {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Values%20and%20Enumerations)
+}
+
+.cm-completionIcon-variables {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Variables)
+}
+
+.cm-completionIcon-words {
+  background-image: url(https://swiftlystatic.vercel.app/airacloud/intellicon?icon=Words)
+}
+
+.cm-lens-clickable:hover {
+  opacity: .7
+}
+
+.cm-lens-clickable {
+  cursor: pointer
+}
+
+.cm-lens {
+  position: absolute;
+  font-family: var(--principal-font-family);
+  font-size: 17px;
+  transform: translateY(-3px);
+  opacity: .6;
+  z-index: 100000
+}
+
+.cm-completionIcon {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 8px
+}
+
+.cm-search {
+  top: 5px !important;
+  right: 5px !important;
+  position: absolute !important;
+  z-index: 1000 !important;
+  background-color: var(--default-button);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.cm-content *::selection,
+.cm-content ::selection {
+  background-color: transparent !important
+}
+
+.cm-content {
+  padding: 5px
+}
+
+
+.cm-cursor {
+  border-left: 2px solid var(--cm-content) !important
+}
+
+.cm-lineNumbers>.cm-gutterElement {
+  display: flex;
+  align-items: center;
+  min-width: 35px !important;
+  justify-content: right
+}
+
+.cm-panels {
+  border: none !important;
+  top: 0 !important;
+  bottom: unset !important;
+  right: 0 !important;
+  position: absolute !important
+}
+
+.cm-highlightSpace {
+  opacity: .4
+}
+
+.errorline {
+  background-color: var(--cm-errorLineBg) !important
+}
+
+.errorlinegutter:after {
+  content: "";
+  width: 26px;
+  background-color: var(--cm-errorLineBg);
+  position: absolute;
+  height: calc(var(--editor-font-size) + 10px);
+  margin-left: 3px
+}
+
+.cm-minimap-inner {
+  overflow-y: visible !important;
+  overflow-x: visible !important
+}
+
+.cm-minimap-box-shadow {
+  box-shadow: unset !important;
+  border-left: 1px solid var(--border)
+}
+
+.ͼ1 span[data-color] {
+  transform: scale(1.3);
+  margin-left: 4px;
+  outline: 1px solid var(--cm-foreground)
+}
+
+.ͼ1 .cm-lineNumbers .cm-gutterElement {
+  padding-left: var(--cm-gutter-padding) !important
+}
+
+.space-mark {
+  background-color: var(--cm-foreground);
+  width: 3px;
+  height: 3px;
+  border-radius: 100%
+}
+
+.cm-completionInfo {
+  padding: 24px;
+  background-color: var(--modal-button) !important;
+  width: 300px
+}
+
+.cm-completionInfo *:not(code,
+  pre),
+.cm-completionInfo {
+  font-family: var(--principal-font-family);
+  font-size: calc(var(--editor-font-size) + 2px)
+}
+
+.cm-completionInfo code,
+.cm-completionInfo pre {
+  background-color: #0003;
+  color: #fff;
+  font-family: var(--editor-font-family) !important;
+  padding: 2px;
+  border-radius: 4px;
+  font-size: var(--editor-font-size);
+  display: inline-block
+}
+
+.cm-completionInfo pre {
+  word-wrap: break-word;
+  display: block;
+  word-break: break-all;
+  line-break: anywhere;
+  overflow-x: hidden;
+  text-overflow: ellipsis
+}
+
+.cm-completionMatchedText {
+  font-weight: 700;
+  text-decoration: none !important;
+  color: #84c1ff
+}
+
+.cm-focused .cm-matchingBracket,
+.cm-focused .cm-selectionMatch {
+  outline: 1px solid var(--cm-selection-match-border) !important;
+  background-color: var(--cm-selection-match) !important
+}
+
+:not(.cm-focused) .cm-selectionMatch {
+  background-color: var(--cm-selection-match) !important
+}
+
+.cm-content {
+  min-width: 160%
+}
+
+.cm-activeLineGutter {
+  background-color: var(--cm-bg) !important
+}
+
+.cm-gutter.cm-foldGutter {
+  width: 25px !important
+}
+
+.cm-line {
+  border-radius: 4px
+}
+
+.ͼ1 .cm-indent-markers:before {
+  left: 0 !important;
+  transform: translate(-5px) !important;
+  -webkit-transform: translateX(-5px) !important;
+  -moz-transform: translateX(-5px) !important;
+  -ms-transform: translateX(-5px) !important;
+  -o-transform: translateX(-5px) !important
+}
+
+.cm-spacematch,
+.cm-nonmatchingBracket {
+  background-color: transparent !important
+}
+
+.cm-info-element {
+  height: 100%;
+  border-left: 1px solid var(--border);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.aira-bpc-1,
+.aira-bpc-1>span,
+.aira-bpc-1>span>span {
+  color: var(--cm-brackets-1) !important;
+  outline: none !important
+}
+
+.aira-bpc-2,
+.aira-bpc-2>span,
+.aira-bpc-2>span>span {
+  color: var(--cm-brackets-2) !important;
+  outline: none !important
+}
+
+.aira-bpc-3,
+.aira-bpc-3>span,
+.aira-bpc-3>span>span {
+  color: var(--cm-brackets-3) !important;
+  outline: none !important
+}
+
+.aira-bpc-4,
+.aira-bpc-4>span,
+.aira-bpc-4>span>span {
+  color: var(--cm-brackets-4) !important;
+  outline: none !important
+}
+
+.aira-bpc-5,
+.aira-bpc-5>span,
+.aira-bpc-5>span>span {
+  color: var(--cm-brackets-5) !important;
+  outline: none !important
+}
+
+.aira-bpc-6,
+.aira-bpc-6>span,
+.aira-bpc-6>span>span {
+  color: var(--cm-brackets-6) !important;
+  outline: none !important
+}
+
+.aira-bpc-1 .ͼt,
+.aira-bpc-2 .ͼt,
+.aira-bpc-3 .ͼt,
+.aira-bpc-4 .ͼt,
+.aira-bpc-5 .ͼt,
+.aira-bpc-6 .ͼt {
+  color: var(--cm-line-comment) !important
+}
+
+.aira-bpc-1 .ͼu,
+.aira-bpc-2 .ͼu,
+.aira-bpc-3 .ͼu,
+.aira-bpc-4 .ͼu,
+.aira-bpc-5 .ͼu,
+.aira-bpc-6 .ͼu {
+  color: var(--cm-multiple-comment) !important
+}
+
+.cm-line {
+  padding: 0 !important
+}
+
+.cm-searchMatch {
+  background-color: #ff63002e !important
+}
+
+.cm-searchMatch-selected {
+  background-color: #ff63006e !important
+}
+
+.cm-selectionLayer {
+  filter: url(#selection-goo)
+}
+
+.cm-gutters {
+  cursor: default
+}
+
+.cm-gutters::selection,
+.cm-gutters *::selection {
+  background-color: transparent !important
+}
+
+.cm-tooltip-autocomplete li[role=option][aria-selected=true] {
+  background-color: var(--file-open-bg) !important
+}
+
+.cm-tooltip-autocomplete li[role=option]:hover {
+  opacity: .8
+}
+
+.cm-tooltip-autocomplete {
+  background-color: var(--modal-button) !important;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  width: fit-content;
+  box-sizing: border-box
+}
+
+.cm-completionMatchedText {
+  font-weight: 700;
+  text-decoration: none !important;
+  color: var(--primary-blue)
+}
+
+.cm-completionMatchedText[aria-selected] {
+  color: var(--text) !important
+}
+
+.cm-tooltip-autocomplete * {
+  box-sizing: border-box
+}
+
+.cm-tooltip-autocomplete li {
+  display: flex;
+  padding: 0 15px;
+  height: 38px;
+  align-items: center;
+  width: var(--intelli-width);
+  gap: 10px;
+  font-family: var(--editor-font-family), monospace;
+  cursor: pointer
+}
+
+.cm-tooltip-autocomplete li:nth-of-type(1) {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px
+}
+
+.cm-tooltip-autocomplete li:last-of-type {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px
+}
+
+.cm-tooltip-autocomplete li:nth-of-type(1):last-of-type {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px
+}
+
+.cm-completionInfo {
+  transform: translateX(8px);
+  border-radius: 8px;
+  left: 100% !important;
+  right: unset !important;
+}
+
+.cm-gutters {
+  background-color: var(--cm-bg) !important
+}
+
+.cm-foldPlaceholder {
+  background-color: transparent !important;
+  border: none !important
+}
+
+/*.aira_logo_small:hover {
+    transform:translate(-125px);
+    opacity:1
+  }
+  .aira_logo_small:hover .aira_logo_title,
+  .aira_logo_small:hover img {
+    opacity:0
+  }
+  .aira_logo_small:hover .goback {
+    opacity:1
+  }
+  .aira_logo_small .goback {
+    opacity:0;
+    font-size:20px;
+    cursor:pointer;
+    text-decoration-thickness:.2px
+  }
+  */
+.aira_sb_title_container {
+  display: flex;
+}
+
+.aira_sb_title_container .account-icon {
+  margin-left: auto;
+}
+
+.zen-mode {
+  position: fixed !important;
+  top: 0px !important;
+  left: 0px !important;
+  z-index: 1000000 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  transform: none !important;
+  border-radius: 0px !important;
+  filter: contrast(1.02);
+}
+
+.zen-mode * {
+  --editor-file-height: 50px;
+  --editor-font-size: 1.5vw;
+}
+
+.zen-mode .file {
+  font-size: 21px;
+}
+
+/* Cositas */
+.zen-mode .cm-content span {
+  text-shadow: 0px 0px 42px;
+}
+
+.cm-gutters *,
+.cm-gutters {
+  background-color: transparent;
+}
+
+.cm-cursor {
+  translate: 2px 0px;
+}

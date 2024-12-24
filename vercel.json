@@ -1,0 +1,15 @@
+{
+    "functions": {
+        "api/git/login.php": { "runtime": "vercel-php@0.6.0" },
+        "api/git/go.php": { "runtime": "vercel-php@0.6.0" },
+
+        "api/python.php": { "runtime": "vercel-php@0.6.0" }
+    },
+    "rewrites": [
+        { "source": "/git/login", "destination": "/api/git/login.php" },
+        { "source": "/git/go", "destination": "/api/git/go.php" },
+        { "source": "/lint/python", "destination": "/api/python.php" },
+
+        { "source": "/(.*)", "destination": "/" }
+    ]
+}

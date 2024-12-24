@@ -1,0 +1,11 @@
+{
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "CodeGPT.Autocomplete.provider": "CodeGPT Plus - Plus",
+    "CodeGPT.Autocomplete.suggestionDelay": 70,
+    "CodeGPT.Autocomplete.maxTokens": 950,
+    "editor.tabSize": 4,
+    "editor.indentSize": "tabSize",
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 4,
+    "editor.wordWrap": "on",
+}

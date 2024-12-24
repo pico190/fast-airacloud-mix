@@ -1,0 +1,9 @@
+{
+    "name": "Party Mode",
+    "version": 1.0,
+    "desc": "Enables party mode the 11 of Febrary (Swiftly Birthday)",
+    "author": "AiraCloud",
+    "verified": true,
+    "mdFiles": ["README.md"],
+    "main": "main.js"
+}

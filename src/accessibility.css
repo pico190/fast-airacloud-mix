@@ -1,0 +1,75 @@
+/*
+AiraCloud Accessibility CSS classes
+
+comentario: por ahora solo tiene las scrollbars, mas adelante ire subiendo otras cosas para accesibilidad
+*/
+
+:root {
+    /* TODOS SE DEBEN MODIFICAR PARA TEMAS CLAROS Y/O DE ALTO CONTRASTE */
+    --airacloud-accessible-scrollable-bg: rgba(255, 255, 255, 0.5);
+    --airacloud-accessible-scrollable-bg-hover: rgba(255, 255, 255, 0.75);
+    /* I've deleted the scrollarrows beacuse they are ugly */
+    /*    --airacloud-accessible-scrollarrow-down: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="%23FFFFFF80"><path d="M8 4l-4 4h8z"/></svg>');
+    --airacloud-accessible-scrollarrow-up: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="%23FFFFFF80"><path d="M8 12l4-4h-8z"/></svg>');
+    --airacloud-accessible-scrollarrow-down-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="%23FFFFFFBF"><path d="M8 4l-4 4h8z"/></svg>');
+    --airacloud-accessible-scrollarrow-up-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="%23FFFFFFBF"><path d="M8 12l4-4h-8z"/></svg>');*/
+
+} 
+
+.airacloud-scrollable-item {
+    scrollbar-gutter: stable !important;
+}
+    
+.airacloud-scrollable-item::-webkit-scrollbar-corner {
+    background-color: transparent!important;
+}
+
+.airacloud-scrollable-item::-webkit-scrollbar {
+    width: var(--size) !important;
+    height: var(--size) !important;
+    --size: 12px;
+    background: transparent !important;
+} 
+
+.airacloud-scrollable-item::-webkit-scrollbar-thumb {
+    background: var(--airacloud-accessible-scrollable-bg) !important;
+    border-radius: 2px!important;
+}
+
+.airacloud-scrollable-item::-webkit-scrollbar-thumb:hover {
+    background: var(--airacloud-accessible-scrollable-bg-hover) !important;
+}
+
+.airacloud-scrollable-item::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+.airacloud-scrollable-item::-webkit-scrollbar-button:single-button {
+    background-color: var(--airacloud-accessible-scrollable-bg) !important;
+    height: 15px !important;
+    width: 15px !important;
+    border-radius: 0 !important;
+    display: block !important;
+}
+
+.airacloud-scrollable-item::-webkit-scrollbar-button:single-button:vertical:increment,
+.airacloud-scrollable-item::-webkit-scrollbar-button:single-button:vertical:decrement,
+.airacloud-scrollable-item::-webkit-scrollbar-button:single-button:horizontal:increment,
+.airacloud-scrollable-item::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background: none!important;
+    background-color: transparent !important;
+    width: 0px!important;
+    height: 0px!important;
+}
+/*
+.airacloud-scrollable-item::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background: var(--airacloud-accessible-scrollarrow-down-hover) center center no-repeat !important;
+}
+
+.airacloud-scrollable-item::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: var(--airacloud-accessible-scrollarrow-up-hover) center center no-repeat !important;
+}*/
+
+.airacloud-scrollable-item::-webkit-scrollbar-button:single-button:hover {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
