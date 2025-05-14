@@ -14,7 +14,7 @@ AiraCloud v6 [Latest]
 
 > AiraCloud is built on top of Vite, its pretty fast in WebKit based browsers, and soon will become a pretty fast desktop app aswell.
 >
-> Testing version: [https://fast-airacloud-mix.vercel.app/](https://fast-airacloud-mix.vercel.app/)
+> Testing version: [https://fast-airacloud-mix.vercel.app/](https://fast-airacloud-mix.vercel.app/) **YA NO DISPONIBLE**.
 >
 > You might also want to check out: [VERSIONING](https://github.com/pico190/fast-airacloud-mix/blob/main/VERSIONING.md) (also in [SPANISH (Versionado en Español)](https://github.com/pico190/fast-airacloud-mix/blob/main/VERSIONING.es.md)) or DOCS (soon (2077 XD))
 
